@@ -6,11 +6,11 @@ from pydantic import BaseModel
 from sqlalchemy import select
 from sqlalchemy.dialects.mysql import insert
 
-import intent_processor
-from seed import seed_user_if_needed
+from intent import intent_processor
+from db.seed import seed_user_if_needed
 from sqlalchemy.ext.asyncio import AsyncSession
-from db_engine import engine
-from models import User, UserQuery, Responses
+from db.db_engine import engine
+from db.models import User, UserQuery, Responses
 
 seed_user_if_needed()
 
